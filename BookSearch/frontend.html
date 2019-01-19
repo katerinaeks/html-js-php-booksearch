@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Book Searching
+	</title>	
+</head>
+<script type="text/javascript" src="http://127.0.0.1/BookSearch/scripts/functions.js"></script>
+<body text="blue">
+	<h1>Book searching:</h1>
+	<p1>Choose:</p1>
+	<br>
+	<select id="mySelection" onChange="show_input_fields()">
+	    <option value="prompt" id="prompt" >Choose Method</option>
+		<option value="via_title" id="via_title" >Find Book By title</option>
+		<option value="via_keyword" id="via_keyword">Find Book by Keyword</option>
+	</select>
+	
+	<br>
+	<input type="text" style='display:none' id="book_title" name="book_title" value="" >
+	<br>
+	<select id='book_titles' style='display:none' onChange="clear_data()"></select>
+	<br>
+	<br>
+	<button onclick="call_server_resource()" id="ajax_call" name="ajax_call">Search</button>
+	<br>
+    <br>
+<textarea style='display:none' id='xml_response' rows="4" cols="50"></textarea>	
+</body>
+</html>
